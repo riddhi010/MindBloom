@@ -3,9 +3,7 @@
 ## 🧠 About MindBloom
 
 **MindBloom** is a smart mental health companion designed to support users in understanding, managing, and improving their emotional well-being. It combines mood tracking, journaling, AI-powered insights, and motivational tools into a single, user-friendly platform — because mental health matters.
-
 ---
-
 ## 🚀 Features
 
 - 📊 **Mood Tracking**  
@@ -25,9 +23,7 @@
 
 - 🔒 **Secure Authentication**  
   Sign in using JWT — your data is encrypted and safe.
-
 ---
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js, Tailwind CSS  
@@ -36,9 +32,7 @@
 - **Authentication:** JWT (JSON Web Tokens)  
 - **Charting:** React-Chart *(for mood analytics)*
 - **API:** OpenRouter API
-
 ---
-
 ## 📦 Getting Started
 
 1. **Clone the repository:**
@@ -63,13 +57,9 @@
 4. **Configure backend and database:**
    - Set up environment variables in a `.env` file
    - Connect MongoDB
-   
-
 ---
-
 ## 📸 Screenshots / Demo
 
-*(Add screenshots of your UI and demo GIFs here)*
 ![image](https://github.com/user-attachments/assets/7fd949cd-4157-4d23-ba72-3cbff557683f)
 
 ![image](https://github.com/user-attachments/assets/aa11ac9b-1476-4374-a3e8-dcde56e0cea3)
@@ -80,13 +70,7 @@
 
 ![image](https://github.com/user-attachments/assets/25448896-c4bf-4b87-8ed3-146c73aaa7c1)
 
-
-
-
-
 ---
-
-
 ## 📬 Contact
 
 **Developed with 💚 by Riddhi**
