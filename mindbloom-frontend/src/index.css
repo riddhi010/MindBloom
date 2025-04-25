@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-in-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounce 3s infinite;
+}
+/* Hero Section */
+.hero-section {
+  background-color: #E3E4E6; 
+  padding-bottom: 0; 
+}
+
+
+.what-is-section {
+  background-color: #D6B07D; 
+  padding-top: 0; 
+}
+
+footer {
+  background-color: rgb(14, 15, 16);
+  
+  padding-top: 0;
+  position: relative;
+  z-index: 10;
+  height: 150px;
+  overflow: hidden;
+}
+
+footer .footer-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 20;
+}
+
+footer .footer-text {
+  color: #000000;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+
+.social-links {
+  margin-top: 10px; 
+}
+
+.social-icon {
+  margin: 0 10px; 
+  display: inline-block;
+}
+
+.social-icon img {
+  width: 30px; 
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2); 
+}
+
+footer svg path {
+  fill: #D6B07D;
+}
+
+footer svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-content {
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 24px;  
+  color: #000000;   
+  margin: 0 10px;
+  text-decoration: none;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.emoji {
+  animation: float 4s ease-in-out infinite; 
+  font-size: 2rem; 
+  display: inline-block; 
+}
+
+.emoji-container {
+  z-index: 10;
+}
