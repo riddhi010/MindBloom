@@ -3,6 +3,7 @@
 ## 🧠 About MindBloom
 
 **MindBloom** is a smart mental health companion designed to support users in understanding, managing, and improving their emotional well-being. It combines mood tracking, journaling, AI-powered insights, and motivational tools into a single, user-friendly platform — because mental health matters.
+
 ---
 ## 🚀 Features
 
@@ -58,7 +59,7 @@
    - Set up environment variables in a `.env` file
    - Connect MongoDB
 ---
-## 📸 Screenshots / Demo
+## 📸 Screenshots 
 
 ![image](https://github.com/user-attachments/assets/7fd949cd-4157-4d23-ba72-3cbff557683f)
 
