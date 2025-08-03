@@ -31,7 +31,7 @@ const Login = () => {
 
     setLoading(true); 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://mindbloom-pg24.onrender.com/api/auth/login', { email, password });
 
       toast.success('Login successful! 🎉');
       localStorage.setItem('token', response.data.token);
