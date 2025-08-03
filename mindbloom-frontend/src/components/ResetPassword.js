@@ -10,7 +10,7 @@ const ResetPassword = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { password });
+      await axios.post(`https://mindbloom-pg24.onrender.com/api/auth/reset-password/${token}`, { password });
       alert("Password reset successful!");
       navigate("/login");
     } catch (err) {
