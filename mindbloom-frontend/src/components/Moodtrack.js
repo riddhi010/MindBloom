@@ -27,7 +27,7 @@ const MoodTracker = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/api/moods", newEntry);
+      const res = await axios.post("https://mindbloom-pg24.onrender.com/api/moods", newEntry);
       setMoods(prev => [res.data, ...prev]); 
     } catch (err) {
       console.error("❌ Error saving mood:", err);
@@ -37,7 +37,7 @@ const MoodTracker = () => {
   
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/moods/${id}`);
+      await axios.delete(`https://mindbloom-pg24.onrender.com/api/moods/${id}`);
       setMoods(prev => prev.filter(m => m._id !== id));
     } catch (err) {
       console.error("❌ Error deleting mood:", err);
@@ -50,7 +50,7 @@ const MoodTracker = () => {
       if (!user) return;
 
       try {
-        const res = await axios.get(`http://localhost:5000/api/moods/${user.id}`);
+        const res = await axios.get(`https://mindbloom-pg24.onrender.com/api/moods/${user.id}`);
         setMoods(res.data); 
       } catch (err) {
         console.error("❌ Error fetching moods:", err);
