@@ -18,7 +18,7 @@ const AddPost = ({ onPostAdded }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/posts/create",
+        "https://mindbloom-pg24.onrender.com/api/posts/create",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
