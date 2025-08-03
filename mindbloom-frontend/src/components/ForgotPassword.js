@@ -7,7 +7,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+      await axios.post("https://mindbloom-pg24.onrender.com/api/auth/forgot-password", { email });
       alert("Reset link sent to your email.");
     } catch (err) {
       alert(err.response?.data?.message || "Error");
