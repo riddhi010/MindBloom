@@ -14,7 +14,7 @@ const Header = () => {
       try {
         const localUser = JSON.parse(localStorage.getItem("user"));
         if (localUser && localUser.id) {
-          const res = await fetch(`http://localhost:5000/api/profile/${localUser.id}`);
+          const res = await fetch(`https://mindbloom-pg24.onrender.com/api/profile/${localUser.id}`);
           const data = await res.json();
           setUserData(data);
           setStreak(data.streak); 
@@ -49,8 +49,8 @@ const Header = () => {
         <img
   src={
     userData?.profilePicture
-      ? `http://localhost:5000/uploads/${userData.profilePicture}`
-      : "http://localhost:5000/uploads/default-profile.png"
+      ? `https://mindbloom-pg24.onrender.com/uploads/${userData.profilePicture}`
+      : "https://mindbloom-pg24.onrender.com/uploads/default-profile.png"
   }
   alt="User"
   className={styles.profilePic}
