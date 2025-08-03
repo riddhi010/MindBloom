@@ -20,7 +20,7 @@ const AIChat = () => {
     setInput('');
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chat", {
+      const res = await axios.post("https://mindbloom-pg24.onrender.com/api/chat", {
         message: input,
       });
 
