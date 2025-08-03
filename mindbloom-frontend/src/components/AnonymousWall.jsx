@@ -9,7 +9,7 @@ const AnonymousWall = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('http://localhost:5000/api/anon-posts');
+      const res = await axios.get('https://mindbloom-pg24.onrender.com/api/anon-posts');
       setPosts(res.data);
     };
     fetchPosts();
@@ -17,7 +17,7 @@ const AnonymousWall = () => {
 
   const handleCreatePost = async () => {
     if (!newPost.trim()) return;
-    const res = await axios.post('http://localhost:5000/api/anon-posts', { text: newPost });
+    const res = await axios.post('https://mindbloom-pg24.onrender.com/api/anon-posts', { text: newPost });
     setPosts([res.data, ...posts]);
     setNewPost('');
   };
@@ -26,13 +26,13 @@ const AnonymousWall = () => {
     const text = commentInputs[postId];
     if (!text || !text.trim()) return;
 
-    const res = await axios.post(`http://localhost:5000/api/anon-posts/${postId}/comments`, { text });
+    const res = await axios.post(`https://mindbloom-pg24.onrender.com/api/anon-posts/${postId}/comments`, { text });
     setPosts(posts.map(p => p._id === postId ? res.data : p));
     setCommentInputs({ ...commentInputs, [postId]: '' });
   };
 
   const handleLike = async (postId) => {
-    const res = await axios.post(`http://localhost:5000/api/anon-posts/${postId}/like`);
+    const res = await axios.post(`https://mindbloom-pg24.onrender.com/api/anon-posts/${postId}/like`);
     setPosts(posts.map(p => p._id === postId ? { ...p, likes: res.data.likes } : p));
   };
 
