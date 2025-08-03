@@ -52,7 +52,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post('https://mindbloom-pg24.onrender.com/api/auth/register', {
         name: fullName,
         email,
         password,
