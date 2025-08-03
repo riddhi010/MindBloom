@@ -1,5 +1,5 @@
 import axios from "axios"; //to make http requests to the backend
-const API = axios.create({ baseURL: "http://localhost:5000/api" });//all requests will be made using this instance
+const API = axios.create({ baseURL: "https://mindbloom-pg24.onrender.com/api" });//all requests will be made using this instance
 
 export const registerUser = (userData) => API.post("/auth/register", userData);
 export const loginUser = async (userData) => {
