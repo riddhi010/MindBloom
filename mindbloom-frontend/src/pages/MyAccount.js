@@ -31,7 +31,7 @@ const MyAccount = () => {
       setFormData(completeUser);
 
       axios
-        .get(`http://localhost:5000/api/posts/user/${storedUser.id || storedUser._id}`)
+        .get(`https://mindbloom-pg24.onrender.com/api/posts/user/${storedUser.id || storedUser._id}`)
 
         .then((res) => {
           console.log(res.data);
@@ -66,7 +66,7 @@ const MyAccount = () => {
     }
 
     axios
-      .put(`http://localhost:5000/api/profile/${user.id}`, form, {
+      .put(`https://mindbloom-pg24.onrender.com/api/profile/${user.id}`, form, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((res) => {
@@ -87,7 +87,7 @@ const MyAccount = () => {
   const handleDeleteAccount = () => {
     if (window.confirm("Are you sure you want to delete your account?")) {
       axios
-        .delete(`http://localhost:5000/api/profile/${user.id}`)
+        .delete(`https://mindbloom-pg24.onrender.com/api/profile/${user.id}`)
         .then(() => {
           localStorage.removeItem("user");
           alert("Account deleted successfully.");
@@ -105,7 +105,7 @@ const MyAccount = () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
   
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${postId}`);
+      await axios.delete(`https://mindbloom-pg24.onrender.com/api/posts/${postId}`);
       setMyPosts((prev) => prev.filter((p) => p._id !== postId));
     } catch (error) {
       console.error("Error deleting post:", error);
@@ -124,7 +124,7 @@ const MyAccount = () => {
   src={
     formData.profilePicture?.startsWith("blob:")
       ? formData.profilePicture
-      : `http://localhost:5000/uploads/${formData.profilePicture || "default-profile.png"}`
+      : `https://mindbloom-pg24.onrender.com/uploads/${formData.profilePicture || "default-profile.png"}`
   }
   alt="Profile"
   className="profile-image"
@@ -202,7 +202,7 @@ const MyAccount = () => {
                 <p>{p.content}</p>
                 {p.image && (
                   <img
-                    src={`http://localhost:5000/uploads/${p.image}`}
+                    src={`https://mindbloom-pg24.onrender.com/uploads/${p.image}`}
                     alt="uploaded"
                     className="post-img"
                   />
