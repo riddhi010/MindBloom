@@ -10,7 +10,7 @@ const Journal = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/posts?page=${currentPage}&limit=${limit}`)
+      .get(`https://mindbloom-pg24.onrender.com/api/posts?page=${currentPage}&limit=${limit}`)
       .then((res) => {
         setPosts(res.data.posts);
         setTotalPages(res.data.totalPages);
@@ -40,7 +40,7 @@ const Journal = () => {
             {post.image && (
               <img
                 className="card-image"
-                src={`http://localhost:5000/uploads/${post.image}`}
+                src={`https://mindbloom-pg24.onrender.com/uploads/${post.image}`}
                 alt="Post"
                 loading="lazy"
               />
