@@ -29,7 +29,6 @@ const Journal = () => {
   return (
     <div className="journal-page">
       <h1 className="journal-title">📝 Journal</h1>
-
       <div className="journal-posts">
         {posts.map((post) => (
           <div key={post._id} className="journal-card">
