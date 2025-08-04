@@ -29,7 +29,7 @@ const Sidebar = () => {
         <li><a href="/journal">Journal</a></li>
         <li><a href="/chat">AI chat</a></li>
         <li><a href="/anowall">AnonymousWall</a></li>
-        <li><a href="/exercise">Exercise</a></li>
+        
 
         
         </ul>
