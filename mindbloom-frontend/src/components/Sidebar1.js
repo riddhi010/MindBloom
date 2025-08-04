@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import './Sidebar.css'; 
+import './Sidebar.css';
 import Cursor from "../components/cursor";
+import { Link } from "react-router-dom"; // ✅ Import Link
+
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,28 +12,18 @@ const Sidebar = () => {
 
   return (
     <div>
-      {/* Sidebar toggle button with icon */}
-      <Cursor/>
+      <Cursor />
       <button className="sidebar-toggle" onClick={toggleSidebar}>
-        {isOpen ? (
-          <i className="fa fa-times"></i> 
-        ) : (
-          <i className="fa fa-bars"></i> 
-        )}
+        {isOpen ? <i className="fa fa-times"></i> : <i className="fa fa-bars"></i>}
       </button>
 
-      {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <ul>
-        
-        <li><a href="/Dashboard">Home</a></li>
-        <li><a href="/mood-tracker">MoodTracker</a></li>
-        <li><a href="/journal">Journal</a></li>
-        <li><a href="/chat">AI chat</a></li>
-        <li><a href="/anowall">AnonymousWall</a></li>
-        
-
-        
+          <li><Link to="/dashboard">Home</Link></li>
+          <li><Link to="/mood-tracker">MoodTracker</Link></li>
+          <li><Link to="/journal">Journal</Link></li>
+          <li><Link to="/chat">AI chat</Link></li>
+          <li><Link to="/anowall">AnonymousWall</Link></li>
         </ul>
       </div>
     </div>
