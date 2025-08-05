@@ -59,7 +59,7 @@ const AnonymousWall = () => {
       {posts.map(post => (
         <div key={post._id} className="bg-white bg-opacity-90 backdrop-blur-md p-6 rounded-3xl shadow-xl max-w-2xl mx-auto mb-8 border-l-4 border-pink-400">
           <p className="text-gray-800 text-lg mb-2 leading-relaxed">📝 {post.text}</p>
-          <p className="text-sm text-gray-500 italic mb-2">💬 Mood detected: <span className="font-semibold text-indigo-500">{post.sentiment}</span></p>
+         
 
           <div className="mt-4 space-y-2">
             {post.comments.map((c, idx) => (
