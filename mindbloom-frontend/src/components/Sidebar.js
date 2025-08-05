@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -11,6 +10,7 @@ const Sidebar = () => {
 
   return (
     <div>
+      {/* Sidebar toggle button */}
       <button className="sidebar-toggle" onClick={toggleSidebar}>
         {isOpen ? (
           <i className="fa fa-times"></i>
@@ -19,14 +19,15 @@ const Sidebar = () => {
         )}
       </button>
 
+      {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <ul>
-          <li><Link to="/login">Login/Register</Link></li>
-          <li><Link smooth to="#home">Home</Link></li>
-          <li><Link smooth to="#about">About</Link></li>
-          <li><Link smooth to="#testimonials">Testimonials</Link></li>
-          <li><Link smooth to="#gallery">Gallery</Link></li>
-          <li><Link smooth to="#contact">Contact</Link></li>
+          <li><a href="/login">Login/Register</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
