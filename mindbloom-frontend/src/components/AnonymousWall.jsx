@@ -31,10 +31,7 @@ const AnonymousWall = () => {
     setCommentInputs({ ...commentInputs, [postId]: '' });
   };
 
-  const handleLike = async (postId) => {
-    const res = await axios.post(`https://mindbloom-pg24.onrender.com/api/anon-posts/${postId}/like`);
-    setPosts(posts.map(p => p._id === postId ? { ...p, likes: res.data.likes } : p));
-  };
+ 
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-indigo-100 to-blue-50 py-10 px-4 sm:px-8">
@@ -88,13 +85,7 @@ const AnonymousWall = () => {
             </button>
           </div>
 
-          <button
-            onClick={() => handleLike(post._id)}
-            className="mt-4 flex items-center space-x-1 text-pink-500 hover:text-pink-600 transition"
-          >
-            <HeartIcon className="w-5 h-5" />
-            <span>{post.likes} people felt this ❤️</span>
-          </button>
+          
         </div>
       ))}
     </div>
