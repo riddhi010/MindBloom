@@ -2,8 +2,7 @@ const axios = require("axios");
 
 const getAIReply = async (text, lang = "en") => {
   try {
-    const response = await axios.post('https://rijjjaaaa-mindbloom-ai-microservice.hf.space
-/analyze', {
+    const response = await axios.post('https://rijjjaaaa-mindbloom-ai-microservice.hf.space/analyze', {
       text,
       lang,
     });
