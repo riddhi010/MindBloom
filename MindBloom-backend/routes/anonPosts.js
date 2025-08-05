@@ -1,6 +1,6 @@
 const express = require('express');
 const AnonPost = require('../models/AnonPost.js');
-const { analyzeSentiment } = require('../utils/sentiment.js');
+
 const { getAIReply } = require("../controllers/aiController");
 
 const router = express.Router();
