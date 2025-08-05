@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
 
     const newPost = new AnonPost({
       text,
-      sentiment: "analyzed", // You can enhance this later
+      
       comments: [
         {
           text: aiReply,
