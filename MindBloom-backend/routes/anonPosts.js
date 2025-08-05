@@ -59,20 +59,6 @@ router.post('/:id/comments', async (req, res) => {
   }
 });
 
-// Like a post
-router.post('/:id/like', async (req, res) => {
-  try {
-    const post = await AnonPost.findById(req.params.id);
-    if (!post) return res.status(404).json({ message: 'Post not found' });
 
-    post.likes += 1;
-    await post.save();
-
-    res.status(200).json({ likes: post.likes });
-  } catch (err) {
-    console.error("❌ Error liking post:", err);
-    res.status(500).json({ message: 'Server error' });
-  }
-});
 
 module.exports = router;
