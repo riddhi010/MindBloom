@@ -9,7 +9,7 @@ const CommentSchema = new mongoose.Schema({
 const AnonPostSchema = new mongoose.Schema({
   text: { type: String, required: true },
   sentiment: { type: String },
-  likes: { type: Number, default: 0 },
+  
   comments: [CommentSchema],
   createdAt: { type: Date, default: Date.now }
 });
