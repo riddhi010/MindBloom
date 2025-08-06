@@ -17,16 +17,13 @@ const MoodGraph = ({ moodData }) => {
 
   const formatDate = (date) => date.toISOString().split('T')[0];
   const todayStr = formatDate(new Date());
-
   const targetDate = selectedDate || todayStr;
 
-  // Filter mood entries for the selected date or today
   const filteredMoods = moodData.filter((mood) => {
     const moodDate = formatDate(new Date(mood.createdAt || mood.time));
     return moodDate === targetDate;
   });
 
-  // Count occurrences of each mood
   const moodCounts = filteredMoods.reduce((acc, mood) => {
     acc[mood.label] = (acc[mood.label] || 0) + 1;
     return acc;
@@ -59,6 +56,7 @@ const MoodGraph = ({ moodData }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,
@@ -96,53 +94,4 @@ const MoodGraph = ({ moodData }) => {
           display: true,
           text: 'Mood Type',
           color: '#ffffff',
-          font: { size: 14, weight: 'bold' },
-        },
-      },
-    },
-    animation: {
-      duration: 1000,
-      easing: 'easeOutBounce',
-    },
-  };
-
-  return (
-    <div
-      style={{
-        backgroundColor: '#1f1c2c',
-        padding: '1rem',
-        borderRadius: '16px',
-      }}
-    >
-      <h3 style={{ textAlign: 'center', marginBottom: '1rem', color: '#ffffff' }}>
-        📊 Mood Frequency Overview
-      </h3>
-
-      {/* Date Picker */}
-      <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-        <input
-          type="date"
-          value={selectedDate}
-          onChange={(e) => setSelectedDate(e.target.value)}
-          max={todayStr}
-          style={{
-            padding: '0.5rem',
-            borderRadius: '8px',
-            border: 'none',
-            fontSize: '1rem',
-          }}
-        />
-      </div>
-
-      {moodLabels.length === 0 ? (
-        <p style={{ color: '#fff', textAlign: 'center' }}>
-          No mood data for {targetDate}.
-        </p>
-      ) : (
-        <Bar data={data} options={options} />
-      )}
-    </div>
-  );
-};
-
-export default MoodGraph;
+          font: { size: 14, weight: 'bo
