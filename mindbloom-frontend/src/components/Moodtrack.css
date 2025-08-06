@@ -229,50 +229,70 @@ body {
     margin-left: 0.5rem;
 }
 
-/* 📱 Mobile Styles */
 @media screen and (max-width: 768px) {
-    .mood-tracker-container,
-    .mood-graph-wrapper {
-        padding: 1rem;
-        margin: 1rem;
-        width: 90%;
-    }
+  .mood-tracker-container,
+  .mood-graph-wrapper {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 95%;
+  }
 
-    .mood-options {
-        gap: 0.6rem;
-    }
+  .mood-options {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
 
-    .mood-button {
-        flex: 1 1 45%;
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
+  .mood-button {
+    flex: 1 1 48%;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
 
-    .mood-tracker-title {
-        font-size: 1.5rem;
-    }
+  .mood-tracker-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 
-    .mood-log {
-        padding: 1rem;
-    }
+  .mood-log {
+    padding: 1rem;
+    max-height: 260px;
+  }
 
-    .mood-entry {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 0.85rem;
-        padding: 0.8rem;
-    }
+  .mood-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
 
-    .log-emoji {
-        font-size: 1.4rem;
-    }
+  .log-emoji {
+    font-size: 1.4rem;
+  }
 
-    .log-label,
-    .log-time {
-        font-size: 0.8rem;
-    }
+  .log-label,
+  .log-time {
+    font-size: 0.85rem;
+  }
 
-    .mood-graph-wrapper {
-        font-size: 1rem;
-    }
+  .mood-entry button {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .mood-graph-wrapper {
+    font-size: 0.95rem;
+  }
+
+  input[type="date"] {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
