@@ -94,4 +94,56 @@ const MoodGraph = ({ moodData }) => {
           display: true,
           text: 'Mood Type',
           color: '#ffffff',
-          font: { size: 14, weight: 'bo
+          font: { size: 14, weight: 'bold' },
+        },
+      },
+    },
+    animation: {
+      duration: 1000,
+      easing: 'easeOutBounce',
+    },
+  };
+
+  return (
+    <div
+      style={{
+        backgroundColor: '#1f1c2c',
+        padding: '1rem',
+        borderRadius: '16px',
+      }}
+    >
+      <h3 style={{ textAlign: 'center', marginBottom: '1rem', color: '#ffffff' }}>
+        📊 Mood Frequency Overview
+      </h3>
+
+      <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <input
+          type="date"
+          value={selectedDate}
+          onChange={(e) => setSelectedDate(e.target.value)}
+          max={todayStr}
+          style={{
+            padding: '0.5rem',
+            borderRadius: '8px',
+            border: 'none',
+            fontSize: '1rem',
+            width: '100%',
+            maxWidth: '250px',
+          }}
+        />
+      </div>
+
+      {moodLabels.length === 0 ? (
+        <p style={{ color: '#fff', textAlign: 'center' }}>
+          No mood data for {targetDate}.
+        </p>
+      ) : (
+        <div style={{ position: 'relative', height: '300px', width: '100%' }}>
+          <Bar data={data} options={options} />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default MoodGraph;
