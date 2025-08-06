@@ -3,43 +3,41 @@
 body {
     position: relative;
     overflow-x: visible;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Main container */
 .mood-tracker-container {
-    width: 900px;
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    height: 70vh;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
     background: #000000;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    margin-top: 5%;
-    margin-left: 5%;
+    margin: 5% auto 2rem auto;
+    box-sizing: border-box;
 }
 
-
+/* Mood graph container */
 .mood-graph-wrapper {
     background: #010101;
     padding: 2rem;
-    margin: 2rem auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-right: 20%;
-    margin-left: 73%;
-    width: 32%;
-    height: 80vh;
-    margin-top: 8%;
-    position: absolute;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
     color: #fbc2eb;
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
-    z-index: 1;
+    box-sizing: border-box;
 }
 
-
+/* Title */
 .mood-tracker-title {
     font-size: 2rem;
     text-align: center;
@@ -48,7 +46,7 @@ body {
     color: #ffffff;
 }
 
-
+/* Mood options (emoji buttons) */
 .mood-options {
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +55,7 @@ body {
     margin-bottom: 2rem;
 }
 
-
+/* Mood button */
 .mood-button {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
     background-size: 300% 300%;
@@ -74,21 +72,15 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.15),
-        0 0 10px rgba(255, 255, 255, 0.2);
     animation: gradientMove 6s ease infinite;
+    flex: 1 1 120px;
+    justify-content: center;
+    min-width: 100px;
 }
-
 
 .mood-button:hover {
     transform: scale(1.05);
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.2),
-        0 0 20px rgba(255, 182, 193, 0.5),
-        0 0 30px rgba(173, 216, 230, 0.4);
 }
-
 
 .mood-button::after {
     content: '';
@@ -107,8 +99,6 @@ body {
     animation: shimmer 2.5s infinite;
 }
 
-
-
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
@@ -121,6 +111,14 @@ body {
     }
 }
 
+@keyframes shimmer {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
 
 .emoji {
     font-size: 1.5rem;
@@ -131,21 +129,20 @@ body {
     font-weight: 600;
 }
 
-
+/* Mood log */
 .mood-log {
     background: linear-gradient(145deg, #1f1c2c, #928dab);
     border-radius: 16px;
     padding: 1.5rem;
-    box-shadow:
-        inset 0 4px 8px rgba(255, 255, 255, 0.05),
-        0 0 20px rgba(145, 92, 182, 0.3);
-    height: 320px;
+    box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.05), 0 0 20px rgba(145, 92, 182, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
     border: 2px solid #3e3e3e;
     position: relative;
+    max-height: 320px;
+    overflow-y: auto;
 }
 
 .mood-log::before {
@@ -165,16 +162,13 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     color: #ffffff;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    text-align: center;
 }
 
 .log-list {
     list-style: none;
-    padding: 1rem 0;
+    padding: 0;
     margin: 0;
-    flex: 1;
-    overflow-y: auto;
-    position: relative;
     z-index: 2;
 }
 
@@ -186,7 +180,6 @@ body {
     background-color: #aaa;
     border-radius: 4px;
 }
-
 
 .mood-entry {
     display: flex;
@@ -201,6 +194,7 @@ body {
     color: #eee;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .mood-entry:hover {
@@ -211,32 +205,74 @@ body {
 .log-emoji {
     font-size: 1.6rem;
     filter: drop-shadow(0 0 3px #ffffffaa);
+    margin-right: 0.5rem;
 }
 
 .log-label {
     color: #ffe8fe;
     font-weight: 600;
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    margin-right: auto;
 }
 
 .log-time {
     font-size: 0.75rem;
     color: #b5b5b5;
+    margin-top: 0.5rem;
 }
 
+.mood-entry button {
+    background: none;
+    border: none;
+    color: #f88;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
 
+/* 📱 Mobile Styles */
 @media screen and (max-width: 768px) {
+    .mood-tracker-container,
+    .mood-graph-wrapper {
+        padding: 1rem;
+        margin: 1rem;
+        width: 90%;
+    }
+
+    .mood-options {
+        gap: 0.6rem;
+    }
+
     .mood-button {
-        flex: 1 1 calc(50% - 1rem);
-        justify-content: center;
+        flex: 1 1 45%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .mood-tracker-title {
+        font-size: 1.5rem;
+    }
+
+    .mood-log {
+        padding: 1rem;
     }
 
     .mood-entry {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.3rem;
+        font-size: 0.85rem;
+        padding: 0.8rem;
+    }
+
+    .log-emoji {
+        font-size: 1.4rem;
+    }
+
+    .log-label,
+    .log-time {
+        font-size: 0.8rem;
+    }
+
+    .mood-graph-wrapper {
+        font-size: 1rem;
     }
 }
-
-
-  
