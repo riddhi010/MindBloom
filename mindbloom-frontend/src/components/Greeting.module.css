@@ -4,11 +4,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  padding: 0 16px;
   opacity: 1;
   animation: fadeIn 1s ease-out forwards;
-  text-align: center;
 }
+
 
 .greeting {
   font-size: 3rem;
@@ -23,6 +22,7 @@
   animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
 }
 
+
 @keyframes typing {
   from {
     width: 0;
@@ -32,16 +32,19 @@
   }
 }
 
+
 @keyframes blink {
   50% {
     border-color: transparent;
   }
 }
 
+
 .emoji {
   font-size: 3rem;
   margin-right: 10px;
 }
+
 
 .name {
   font-size: 3rem;
@@ -59,59 +62,17 @@
   }
 }
 
+
 .additionalMessage {
   font-family: 'Arial', sans-serif;
   font-size: 1.5rem;
-  color: #715a48;
+  color: #715a48; 
   text-align: center;
   margin-top: 10px;
   opacity: 0;
-  animation: fadeInText 2s ease-out forwards 1s;
+  animation: fadeInText 2s ease-out forwards 1s; 
 }
 
-/* --------------------
-   Responsive Styles
---------------------- */
-
-@media (max-width: 768px) {
-  .greeting {
-    font-size: 2rem;
-    white-space: normal;
-    width: 100%;
-    animation: fadeInText 2s ease-out forwards; /* simpler animation for mobile */
-  }
-
-  .emoji {
-    font-size: 2rem;
-    margin-right: 6px;
-  }
-
-  .name {
-    font-size: 2rem;
-  }
-
-  .additionalMessage {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .greeting {
-    font-size: 1.6rem;
-  }
-
-  .emoji {
-    font-size: 1.5rem;
-  }
-
-  .name {
-    font-size: 1.6rem;
-  }
-
-  .additionalMessage {
-    font-size: 1rem;
-  }
-}
 
 @keyframes fadeIn {
   0% {
