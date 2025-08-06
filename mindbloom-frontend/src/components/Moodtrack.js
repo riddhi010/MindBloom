@@ -16,6 +16,7 @@ const MoodTracker = () => {
     { emoji: '😃', label: 'Excited' },
   ];
 
+  
   const handleMoodClick = async (mood) => {
     if (!user) return alert("Please log in to track your mood.");
 
@@ -33,21 +34,23 @@ const MoodTracker = () => {
     }
   };
 
+  
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://mindbloom-pg24.onrender.com/api/moods/${id}`);
+      await axios.delete(https://mindbloom-pg24.onrender.com/api/moods/${id});
       setMoods(prev => prev.filter(m => m._id !== id));
     } catch (err) {
       console.error("❌ Error deleting mood:", err);
     }
   };
 
+  
   useEffect(() => {
     const fetchMoods = async () => {
       if (!user) return;
 
       try {
-        const res = await axios.get(`https://mindbloom-pg24.onrender.com/api/moods/${user.id}`);
+        const res = await axios.get(https://mindbloom-pg24.onrender.com/api/moods/${user.id});
         setMoods(res.data); 
       } catch (err) {
         console.error("❌ Error fetching moods:", err);
@@ -74,10 +77,7 @@ const MoodTracker = () => {
             </button>
           ))}
         </div>
-      </div>
 
-      {/* NEW WRAPPER FOR LOG + GRAPH */}
-      <div className="mood-content-wrapper">
         <div className="mood-log">
           <h3 className="mood-log-title">📝 Your Mood Log</h3>
           {moods.length === 0 ? (
@@ -91,18 +91,18 @@ const MoodTracker = () => {
                   <span className="log-time">
                     {new Date(m.createdAt || m.time).toLocaleString()}
                   </span>
-                  <button onClick={() => handleDelete(m._id)}>
-                    ❌
+                  <button  onClick={() => handleDelete(m._id)}>
+                  ❌
                   </button>
                 </li>
               ))}
             </ul>
           )}
         </div>
+      </div>
 
-        <div className="mood-graph-wrapper">
-          <MoodGraph moodData={moods} />
-        </div>
+      <div className="mood-graph-wrapper">
+        <MoodGraph moodData={moods} />
       </div>
     </>
   );
