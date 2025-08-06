@@ -31,7 +31,7 @@ body {
     width: 100%;
     max-width: 900px;
     margin: 0 3rem 3rem auto;
-    transform: translateX(-10px); 
+    transform: translateX(20px); 
     color: #fbc2eb;
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
