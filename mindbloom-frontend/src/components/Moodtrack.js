@@ -16,7 +16,6 @@ const MoodTracker = () => {
     { emoji: '😃', label: 'Excited' },
   ];
 
-  
   const handleMoodClick = async (mood) => {
     if (!user) return alert("Please log in to track your mood.");
 
@@ -34,7 +33,6 @@ const MoodTracker = () => {
     }
   };
 
-  
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://mindbloom-pg24.onrender.com/api/moods/${id}`);
@@ -44,7 +42,6 @@ const MoodTracker = () => {
     }
   };
 
-  
   useEffect(() => {
     const fetchMoods = async () => {
       if (!user) return;
@@ -77,7 +74,10 @@ const MoodTracker = () => {
             </button>
           ))}
         </div>
+      </div>
 
+      {/* NEW WRAPPER FOR LOG + GRAPH */}
+      <div className="mood-content-wrapper">
         <div className="mood-log">
           <h3 className="mood-log-title">📝 Your Mood Log</h3>
           {moods.length === 0 ? (
@@ -91,18 +91,18 @@ const MoodTracker = () => {
                   <span className="log-time">
                     {new Date(m.createdAt || m.time).toLocaleString()}
                   </span>
-                  <button  onClick={() => handleDelete(m._id)}>
-                  ❌
+                  <button onClick={() => handleDelete(m._id)}>
+                    ❌
                   </button>
                 </li>
               ))}
             </ul>
           )}
         </div>
-      </div>
 
-      <div className="mood-graph-wrapper">
-        <MoodGraph moodData={moods} />
+        <div className="mood-graph-wrapper">
+          <MoodGraph moodData={moods} />
+        </div>
       </div>
     </>
   );
