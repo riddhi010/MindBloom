@@ -61,7 +61,7 @@ const Header = () => {
           {dropdownOpen && (
             <div className={styles.dropdownMenu}>
               <Link to="/my-account">My Account</Link>
-              <p>Settings</p>
+              
               <p onClick={handleLogout} className={styles.logoutBtn}>Logout</p>
             </div>
           )}
