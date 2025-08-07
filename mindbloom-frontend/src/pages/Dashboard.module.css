@@ -1,61 +1,71 @@
 .dashboardContainer {
-    background: linear-gradient(to right, #f5e1c8, #e8c3a0); 
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    overflow: hidden;
-    
-  }
-  
-  
-  .content {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    height: 80vh;
-    margin-top: 20px;
-    align-items: center;
-  }
-  
- 
+  background: linear-gradient(to right, #f5e1c8, #e8c3a0); 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Important for responsiveness */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
 .leftSection {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards; 
-    
-  }
-  
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
- 
-  .rightSection {
-    width: 300px; 
-    height: 300px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.rightSection {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .dashboardImage {
-    width: 1500%; 
-    height: auto;
-    max-width: 800px;
-    margin-top: 60%;
-    margin-right: 50%;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+/* 🔻 Responsive tweaks for mobile */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
+
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    margin: 0;
+  }
+
+  .dashboardImage {
+    max-width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
