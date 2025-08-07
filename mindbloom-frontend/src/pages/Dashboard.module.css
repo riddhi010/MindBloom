@@ -82,4 +82,7 @@
     margin-right: 0;
     max-width: 80%;
   }
+  .dashboardContainer {
+    padding-top: 80px; 
+  }
 }
