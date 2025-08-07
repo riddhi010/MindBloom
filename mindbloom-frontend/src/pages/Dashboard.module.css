@@ -1,6 +1,6 @@
 .dashboardContainer {
   background: linear-gradient(to right, #f5e1c8, #e8c3a0); 
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,21 +10,20 @@
 
 .content {
   display: flex;
-  flex-wrap: wrap; /* Important for responsiveness */
   justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
+  width: 90%;
+  height: 80vh;
   margin-top: 20px;
-  gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .leftSection {
-  flex: 1 1 300px;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: 20px;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards; 
 }
@@ -35,7 +34,8 @@
 }
 
 .rightSection {
-  flex: 1 1 300px;
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,27 +45,30 @@
   width: 100%;
   max-width: 300px;
   height: auto;
+  margin-top: 60%;
+  margin-right: 50%;
   object-fit: contain;
-  margin-top: 20px;
   border-radius: 12px;
 }
 
-/* 🔻 Responsive tweaks for mobile */
+/* ✅ Mobile-specific fixes only, without disturbing desktop layout */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    height: auto;
+    margin-top: 10px;
   }
 
-  .leftSection,
-  .rightSection {
+  .leftSection, .rightSection {
     width: 100%;
     margin: 0;
+    justify-content: center;
   }
 
   .dashboardImage {
-    max-width: 100%;
-    margin: 20px 0 0 0;
+    margin-top: 20px;
+    margin-right: 0;
+    max-width: 80%;
   }
 }
