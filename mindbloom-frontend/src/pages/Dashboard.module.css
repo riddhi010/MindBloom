@@ -42,14 +42,25 @@
 }
 
 .dashboardImage {
-  width: 100%;
-  max-width: 300px;
+  width: 1500%;
   height: auto;
+  max-width: 800px;
   margin-top: 60%;
   margin-right: 50%;
   object-fit: contain;
   border-radius: 12px;
 }
+
+/* Mobile-specific image fix */
+@media (max-width: 768px) {
+  .dashboardImage {
+    width: 100%;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+}
+
 
 /* ✅ Mobile-specific fixes only, without disturbing desktop layout */
 @media (max-width: 768px) {
