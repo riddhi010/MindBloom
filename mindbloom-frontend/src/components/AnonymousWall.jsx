@@ -21,7 +21,7 @@ const AnonymousWall = () => {
   const handleCreatePost = async () => {
     if (!newPost.trim()) return;
     const res = await axios.post('https://mindbloom-pg24.onrender.com/api/anon-posts', {
-      text: newPost 
+      text: newPost, 
       lang: userLang,
     });
     setPosts([res.data, ...posts]);
@@ -33,7 +33,7 @@ const AnonymousWall = () => {
     if (!text || !text.trim()) return;
 
     const res = await axios.post(`https://mindbloom-pg24.onrender.com/api/anon-posts/${postId}/comments`, { 
-      text 
+      text, 
       lang: userLang,
     });
     setPosts(posts.map(p => p._id === postId ? res.data : p));
