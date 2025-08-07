@@ -35,12 +35,13 @@ const WhatIsMindBloom = () => (
           </h3>
 
           <ul className="list-disc list-inside text-gray-300 leading-relaxed text-left space-y-2 transition-all duration-500 group-hover:text-[#2b2a29] text-sm sm:text-base">
-            <li><strong>Mood Tracking</strong> – Log daily emotions to identify patterns in mental health.</li>
-            <li><strong>Mood Check</strong> – Analyze user responses to determine their current emotional state.</li>
-            <li><strong>Anonymous Chat</strong> – Talk to others without revealing identity in a safe environment.</li>
-            <li><strong>Community Support</strong> – Connect with people experiencing similar emotions for encouragement.</li>
-            <li><strong>Personal Insights</strong> – Track mood changes over time and find ways to improve well-being.</li>
-            <li><strong>Privacy & Security</strong> – Ensures confidentiality with no personal details shared.</li>
+            <li><strong>Mood Tracking</strong> – Log your emotions daily to uncover trends and gain insights into your mental well-being.</li>
+            <li><strong>Streak Management</strong> – Stay consistent with daily check-ins to build healthy habits and grow your MindBloom streak.</li>
+            <li><strong>Anonymous Wall</strong> – Express your thoughts freely and connect with others in a safe, anonymous space.</li>
+            <li><strong>Bloom Bot</strong> – Chat with our intelligent AI for personalized suggestions, emotional support, and encouragement.</li>
+            <li><strong>Journaling</strong> – Reflect on your day, share your thoughts (if you choose), and uplift your mood through the power of writing.</li>
+
+            
           </ul>
         </div>
       </div>
