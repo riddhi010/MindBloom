@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Journal.css";
+import FeatureLayout from "../components/feature";
 
 const Journal = () => {
   const [posts, setPosts] = useState([]);
@@ -28,6 +29,7 @@ const Journal = () => {
 
   return (
     <div className="journal-page">
+    <FeatureLayout />
       <h1 className="journal-title">📝 Journal</h1>
       <div className="journal-posts">
         {posts.map((post) => (
