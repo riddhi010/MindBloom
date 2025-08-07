@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { HeartIcon, SparklesIcon, ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid';
+import FeatureLayout from "../components/feature";
 
 const AnonymousWall = () => {
   const [posts, setPosts] = useState([]);
@@ -35,6 +36,7 @@ const AnonymousWall = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-indigo-100 to-blue-50 py-10 px-4 sm:px-8">
+      <FeatureLayout />
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-pink-600">💗 Cozy Corner</h1>
         <p className="mt-2 text-indigo-600 text-lg italic">Your safe emotional space — you’re not alone 🌷</p>
