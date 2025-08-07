@@ -7,6 +7,8 @@ const AnonymousWall = () => {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState('');
   const [commentInputs, setCommentInputs] = useState({});
+  const userLang = navigator.language?.split('-')[0] || 'en';  // e.g., "fr", "hi", "es"
+
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -18,7 +20,10 @@ const AnonymousWall = () => {
 
   const handleCreatePost = async () => {
     if (!newPost.trim()) return;
-    const res = await axios.post('https://mindbloom-pg24.onrender.com/api/anon-posts', { text: newPost });
+    const res = await axios.post('https://mindbloom-pg24.onrender.com/api/anon-posts', {
+      text: newPost 
+      lang: userLang,
+    });
     setPosts([res.data, ...posts]);
     setNewPost('');
   };
@@ -27,7 +32,10 @@ const AnonymousWall = () => {
     const text = commentInputs[postId];
     if (!text || !text.trim()) return;
 
-    const res = await axios.post(`https://mindbloom-pg24.onrender.com/api/anon-posts/${postId}/comments`, { text });
+    const res = await axios.post(`https://mindbloom-pg24.onrender.com/api/anon-posts/${postId}/comments`, { 
+      text 
+      lang: userLang,
+    });
     setPosts(posts.map(p => p._id === postId ? res.data : p));
     setCommentInputs({ ...commentInputs, [postId]: '' });
   };
