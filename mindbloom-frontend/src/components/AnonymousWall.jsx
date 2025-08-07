@@ -38,7 +38,7 @@ const AnonymousWall = () => {
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-indigo-100 to-blue-50 py-10 px-4 sm:px-8">
       <FeatureLayout />
       <div className="text-center mb-10">
-        <h1 className="mt-17 text-4xl font-bold text-pink-600">💗 Cozy Corner</h1>
+        <h1 className="mt-15 text-4xl font-bold text-pink-600">💗 Cozy Corner</h1>
 
         <p className="mt-2 text-indigo-600 text-lg italic">Your safe emotional space — you’re not alone 🌷</p>
       </div>
