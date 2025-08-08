@@ -12,20 +12,20 @@ const Dashboard = () => {
       <Sidebar/>
       <Header />
 
-      {/* Main Content Area */}
+      {/* Main Content */}
       <div className={styles.content}>
         <div className={styles.leftSection}>
           <Greeting /> 
           <QuoteCard />
 
         </div>
-        <div className={styles.rightSection}>
+          <div className={styles.rightSection}>
          
           <img
-  className={styles.dashboardImage}
-  src="/assets/dash-Photoroom.png" 
-  alt="Inspiration"
-/>
+          className={styles.dashboardImage}
+          src="/assets/dash-Photoroom.png" 
+          alt="Inspiration"
+          />
 
         </div>
       </div>
