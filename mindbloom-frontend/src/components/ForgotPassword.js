@@ -16,7 +16,13 @@ const ForgotPassword = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="email" onChange={(e) => setEmail(e.target.value)} required />
+      <input
+      type="email"
+      onChange={(e) => setEmail(e.target.value)}
+      required
+      placeholder="Enter your registered email"
+      />
+
       <button type="submit">Send Reset Link</button>
     </form>
   );
