@@ -12,14 +12,14 @@ const Sidebar = () => {
 
   const handleAnchorClick = (id) => {
     setIsOpen(false);
-    // Go to homepage and scroll after navigation
+    
     navigate("/");
     setTimeout(() => {
       const section = document.getElementById(id);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Give time for Home to load
+    }, 100); 
   };
 
   return (
