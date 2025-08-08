@@ -4,7 +4,7 @@ const MoodSchema = new mongoose.Schema({
   emoji: String,
   label: String,
   userId: {
-    type: mongoose.Schema.Types.ObjectId, //defines this field as an ObjectId, which is the primary type MongoDB uses for IDs.
+    type: mongoose.Schema.Types.ObjectId, 
     ref: 'User',
     required: true
   },
