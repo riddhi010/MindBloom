@@ -28,7 +28,7 @@
   margin-top: 10px;
 }
 
-/* ✅ Mobile responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .greeting {
     font-size: 1.6rem;
