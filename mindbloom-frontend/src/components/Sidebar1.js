@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Sidebar.css';
 import Cursor from "../components/cursor";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link } from "react-router-dom"; 
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
