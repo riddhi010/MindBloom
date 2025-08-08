@@ -6,7 +6,7 @@ import Cursor from "../components/cursor";
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; // 👁️ Icons
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; 
 
 
 
@@ -109,10 +109,7 @@ const Login = () => {
     Forgot Password?
   </span>
 </div>
-
-
-
-          <button className={styles.authButton} type="submit" disabled={loading}>
+ <button className={styles.authButton} type="submit" disabled={loading}>
             {loading ? (
               <span className={styles.spinner}></span>
             ) : (
