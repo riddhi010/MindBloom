@@ -25,6 +25,9 @@ Live : https://mindbloom-client.onrender.com/
 
 - 🔒 **Secure Authentication**  
   Sign in using JWT — your data is encrypted and safe.
+
+-  📧 **Password Recovery via Email (SendGrid)**
+   Easily reset your password through email with SendGrid integration — ensuring a secure and seamless recovery process.
 ---
 ## 🛠️ Tech Stack
 
