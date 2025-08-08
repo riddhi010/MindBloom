@@ -6,7 +6,7 @@ import styles from './LoginRegister.module.css';
 import Cursor from "../components/cursor";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; // 👁️ Icons
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; 
 
 const Register = () => {
   const navigate = useNavigate();
