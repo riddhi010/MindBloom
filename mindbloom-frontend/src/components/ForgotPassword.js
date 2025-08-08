@@ -22,4 +22,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword; // ✅ Add this line!
+export default ForgotPassword; 
