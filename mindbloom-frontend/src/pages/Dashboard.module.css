@@ -51,7 +51,7 @@
   border-radius: 12px;
 }
 
-/* Mobile-specific image fix */
+
 @media (max-width: 768px) {
   .dashboardImage {
     width: 100%;
@@ -62,7 +62,7 @@
 }
 
 
-/* ✅ Mobile-specific fixes only, without disturbing desktop layout */
+
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
