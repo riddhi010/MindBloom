@@ -11,8 +11,6 @@ const AIChatPage = () => {
       <FeatureLayout />
       <div className="content">
         <AIChat />
-        
-
       </div>
       {[...Array(30)].map((_, i) => (
   <div
