@@ -129,7 +129,7 @@
 
 .passwordInput {
   width: 100%;
-  padding: 10px 35px 10px 10px; /* space for eye icon */
+  padding: 10px 35px 10px 10px; 
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
