@@ -138,7 +138,7 @@ router.post("/forgot-password", async (req, res) => {
       expiresIn: "15m",
     });
 
-    const resetLink = `${process.env.CLIENT_URL}/reset-password/${token}`;
+    const resetLink = `${process.env.CLIENT_URL}/#/reset-password/${token}`;
     const html = `<p>Click <a href="${resetLink}">here</a> to reset your password. This link is valid for 15 minutes.</p>`;
 
     await sendMail({
