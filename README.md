@@ -27,7 +27,8 @@ Live : https://mindbloom-client.onrender.com/
   Sign in using JWT — your data is encrypted and safe.
 
 - 🤖 **Empathic AI Responses with Multi-Language Support**
-      Provides emotionally supportive replies to anonymous user posts, with built-in multi-language translation for global accessibility — powered by a dedicated AI microservice. 🔗 https://github.com/riddhi010/mindbloom-ai-service  
+
+  Provides emotionally supportive replies to anonymous user posts, with built-in multi-language translation for global accessibility — powered by a dedicated AI microservice. 🔗 https://github.com/riddhi010/mindbloom-ai-service  
 ---
 ## 🛠️ Tech Stack
 
